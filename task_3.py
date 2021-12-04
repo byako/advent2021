@@ -14,14 +14,14 @@ LEN = len(INPUT[0])
 
 ones = [0] * LEN
 for line in INPUT:
-    for idx, val in enumerate(line):
+    for (idx, val) in enumerate(line):
         if val == "1":
             ones[idx] += 1
 
 gamma_rate = ["0"] * LEN
 epsilon_rate = ["0"] * LEN
 
-for idx, val in enumerate(ones):
+for (idx, val) in enumerate(ones):
     if val >= len(INPUT) // 2:
         gamma_rate[idx] = "1"
     else:
